@@ -116,7 +116,57 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/style.css */ \"./src/assets/style.css\");\n\r\n\r\nconst content = document.querySelector(\".content\");\r\ncontent.innerHTML = `Hello, is it me you looking for?`;\n\n//# sourceURL=webpack://odin-restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/style.css */ \"./src/assets/style.css\");\n/* harmony import */ var _js_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/layout */ \"./src/js/layout.js\");\n\r\n\r\n\r\n(0,_js_layout__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://odin-restaurant/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/contact.js":
+/*!***************************!*\
+  !*** ./src/js/contact.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./src/js/helpers.js\");\n\r\n\r\nconst createContact = () => {\r\n    const contact = document.createElement(\"div\");\r\n    contact.classList.add(\"contact\");\r\n\r\n    const pageTitle = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.createHeading)(\"Contact page\");\r\n    contact.appendChild(pageTitle);\r\n\r\n    const pageContent = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.createPara)(\"This is the Contact page\")\r\n    contact.appendChild(pageContent);\r\n\r\n    return contact;\r\n}\r\n\r\nconst generateContact = () => {\r\n    const main = document.querySelector(\"main\");\r\n    main.innerHTML = \"\";\r\n    main.appendChild(createContact());\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateContact);\n\n//# sourceURL=webpack://odin-restaurant/./src/js/contact.js?");
+
+/***/ }),
+
+/***/ "./src/js/helpers.js":
+/*!***************************!*\
+  !*** ./src/js/helpers.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHeading\": () => (/* binding */ createHeading),\n/* harmony export */   \"createPara\": () => (/* binding */ createPara)\n/* harmony export */ });\nconst createHeading = (text) => {\r\n    const heading = document.createElement(\"h2\");\r\n    heading.textContent = text;\r\n    return heading;\r\n}\r\n\r\nconst createPara = (text) => {\r\n    const para = document.createElement(\"p\");\r\n    para.textContent = text;\r\n    return para;\r\n}\r\n\r\n\n\n//# sourceURL=webpack://odin-restaurant/./src/js/helpers.js?");
+
+/***/ }),
+
+/***/ "./src/js/home.js":
+/*!************************!*\
+  !*** ./src/js/home.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./src/js/helpers.js\");\n\r\n\r\nconst createHome = () => {\r\n    const home = document.createElement(\"div\");\r\n    home.classList.add(\"home\");\r\n\r\n    const pageTitle = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.createHeading)(\"Homepage\");\r\n    home.appendChild(pageTitle);\r\n\r\n    const pageContent = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.createPara)(\"This is the Homepage\")\r\n    home.appendChild(pageContent);\r\n\r\n    return home;\r\n}\r\n\r\nconst generateHome = () => {\r\n    const main = document.querySelector(\"main\");\r\n    main.innerHTML = \"\";\r\n    main.appendChild(createHome());\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateHome);\n\n//# sourceURL=webpack://odin-restaurant/./src/js/home.js?");
+
+/***/ }),
+
+/***/ "./src/js/layout.js":
+/*!**************************!*\
+  !*** ./src/js/layout.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/js/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/js/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/js/contact.js\");\n\r\n\r\n\r\n\r\nconst createHeader = () => {\r\n    const header = document.createElement(\"header\");\r\n    header.classList.add(\"header\");\r\n    return header;\r\n}\r\n\r\nconst createNavbar = () => {\r\n    const navbar = document.createElement(\"nav\");\r\n    navbar.classList.add(\"navbar\");\r\n\r\n    // Create list and its items\r\n    const navList = document.createElement(\"ul\");\r\n    navList.classList.add(\"nav-list\");\r\n\r\n    const navItems = [\r\n        { name: \"Home\", id: \"home\" },\r\n        { name: \"Menu\", id: \"menu\" },\r\n        { name: \"Contact\", id: \"contact\"}\r\n    ]\r\n    \r\n    const tabPage = {\r\n        \"home\" : _home__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\r\n        \"menu\" : _menu__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\r\n        \"contact\" : _contact__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\r\n    }\r\n\r\n    for (const navItem of navItems) {\r\n        const li = document.createElement(\"li\");\r\n        li.classList.add(\"nav-item\");\r\n        li.textContent = navItem.name;\r\n        li.setAttribute(\"id\", navItem.id);\r\n        li.addEventListener(\"click\", (e) => {\r\n            setActiveTab(navList, li);\r\n            const selectedTab = tabPage[li.id];\r\n            selectedTab ? selectedTab() : null;\r\n        });\r\n        navList.appendChild(li);\r\n    }\r\n    navbar.appendChild(navList);   \r\n    return navbar;\r\n}\r\n\r\nconst setActiveTab = (navList, tab) => {\r\n    Array.from(navList.children).forEach(tab => tab.classList.remove(\"active\"));\r\n    tab.classList.add(\"active\");\r\n}\r\n\r\nconst createMain = () => {\r\n    const main = document.createElement(\"main\");\r\n    main.classList.add(\"main\");\r\n    return main;\r\n}\r\n\r\nconst createFooter = () => {\r\n    const footer = document.createElement(\"footer\");\r\n    footer.classList.add(\"footer\");\r\n    return footer;\r\n}\r\n\r\nconst generatePage = () => {\r\n    const content = document.querySelector(\".content\");\r\n    const pageItems = [createHeader(), createNavbar(), createMain(), createFooter()];\r\n    pageItems.forEach(item => content.appendChild(item));\r\n}\r\n\r\nconst initialLoad = () => {\r\n    generatePage();\r\n    (0,_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initialLoad);\n\n//# sourceURL=webpack://odin-restaurant/./src/js/layout.js?");
+
+/***/ }),
+
+/***/ "./src/js/menu.js":
+/*!************************!*\
+  !*** ./src/js/menu.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./src/js/helpers.js\");\n\r\n\r\nconst createMenu = () => {\r\n    const menu = document.createElement(\"div\");\r\n    menu.classList.add(\"menu\");\r\n\r\n    const pageTitle = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.createHeading)(\"Menu page\");\r\n    menu.appendChild(pageTitle);\r\n\r\n    const pageContent = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.createPara)(\"This is the Menu page\")\r\n    menu.appendChild(pageContent);\r\n\r\n    return menu;\r\n}\r\n\r\nconst generateMenu = () => {\r\n    const main = document.querySelector(\"main\");\r\n    main.innerHTML = \"\";\r\n    main.appendChild(createMenu());\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateMenu);\n\n//# sourceURL=webpack://odin-restaurant/./src/js/menu.js?");
 
 /***/ })
 
